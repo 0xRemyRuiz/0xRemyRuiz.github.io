@@ -1,0 +1,11 @@
+title: "OxRemyRuiz Blog personnel"
+description: "Diverses considérations sur la sécurité et les sciences de l'inforamtion."
+baseurl: ""
+url: "https://0xremyruiz.github.io"
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+exclude:
+  - README.md
