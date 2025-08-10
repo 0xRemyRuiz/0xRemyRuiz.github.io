@@ -9,3 +9,5 @@ plugins:
 
 exclude:
   - README.md
+
+markdown_ext: "md,markdown,mkdown,rst" # enable RST
