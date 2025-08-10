@@ -1,4 +1,4 @@
-.. title:: Homepage
+title: Homepage
 
 Page d'accueil
 ==============
@@ -6,7 +6,7 @@ Page d'accueil
 Index
 -----
 
-.. raw:: html
+raw: html
 
     <ul>
     {% for post in site.posts %}
