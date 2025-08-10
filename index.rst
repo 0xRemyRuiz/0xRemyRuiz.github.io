@@ -1,4 +1,6 @@
+---
 title: Homepage
+---
 
 Page d'accueil
 ==============
@@ -6,6 +8,7 @@ Page d'accueil
 Index
 -----
 
+---
 raw: html
 
     <ul>
