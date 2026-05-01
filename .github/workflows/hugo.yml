@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Update this value to upgrade Hugo. Must be Hugo extended.
-      HUGO_VERSION: 0.147.0
+      HUGO_VERSION: 0.161.1
     steps:
       - name: Install Hugo CLI
         run: |
