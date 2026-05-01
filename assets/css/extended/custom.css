@@ -1,0 +1,33 @@
+/*
+ * Hacker-green dark palette.
+ *
+ * Both :root and .dark are overridden so the result is identical
+ * whether PaperMod's theme-init script adds the "dark" class or not.
+ * Combined with disableThemeToggle = true in hugo.toml, the localStorage
+ * key "pref-theme" is never written, making PaperMod's read of it a no-op.
+ */
+
+:root,
+.dark {
+  --theme:    #0d1117;
+  --entry:    #0f1b0f;
+  --primary:  #ccd8cc;
+  --secondary:#537853;
+  --tertiary: #192919;
+  --content:  #baccba;
+  --hljs-bg:  #080e08;
+  --code-bg:  #0f1b0f;
+  --border:   #224422;
+}
+
+a {
+  color: #39ff14;
+}
+
+a:hover {
+  color: #7fff5a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2dcc2d;
+}
