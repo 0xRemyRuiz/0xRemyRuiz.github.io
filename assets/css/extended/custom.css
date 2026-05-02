@@ -1,33 +1,155 @@
 /*
- * Hacker-green dark palette.
+ * Light theme (:root) — clean off-white with green accents.
+ * Dark theme (.dark) — hacker-green on near-black.
  *
- * Both :root and .dark are overridden so the result is identical
- * whether PaperMod's theme-init script adds the "dark" class or not.
- * Combined with disableThemeToggle = true in hugo.toml, the localStorage
- * key "pref-theme" is never written, making PaperMod's read of it a no-op.
+ * PaperMod's theme-init script toggles the "dark" class on <body>.
+ * disableThemeToggle = false in hugo.toml renders the toggle button.
+ * defaultTheme = "dark" means first-visit defaults to dark.
  */
 
-:root,
-.dark {
-  --theme:    #0d1117;
+:root {
+  --theme:    #f2f6f2;
+  --entry:    #e6ede6;
+  --primary:  #1a2e1a;
+  --secondary:#2d5a2d;
+  --tertiary: #d0dfd0;
+  --content:  #2a3a2a;
+  --hljs-bg:  #e6ede6;
+  --code-bg:  #e6ede6;
+  --border:   #9ab89a;
+
+  --link-color:       #146614;
+  --link-hover-color: #0a4a0a;
+  --heading-color:    #135213;
+}
+
+:root[data-theme="dark"] {
+/*  --theme:    #0d1117;
   --entry:    #0f1b0f;
   --primary:  #ccd8cc;
-  --secondary:#537853;
+  --secondary:#4a8c4c;
   --tertiary: #192919;
   --content:  #baccba;
   --hljs-bg:  #080e08;
   --code-bg:  #0f1b0f;
   --border:   #224422;
+*/
+  --link-color:       #28a816;
+  --link-hover-color: #38c422;
+  --heading-color:    #229922;
 }
 
 a {
-  color: #2db80f;
+  color: var(--link-color);
 }
 
 a:hover {
-  color: #50d030;
+  color: var(--link-hover-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #229922;
+  color: var(--heading-color);
+}
+
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-left: 14px;
+}
+
+.nav-social a {
+  display: flex;
+  align-items: center;
+  color: var(--secondary);
+  transition: color 0.2s;
+}
+
+.nav-social a:hover {
+  color: var(--link-color);
+}
+
+.first-entry {
+  min-height: 0;
+}
+
+p {
+  text-align: justify;
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.load-more-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--link-color);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 1.8rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.load-more-btn:hover:not(:disabled) {
+  border-color: var(--link-color);
+  color: var(--link-hover-color);
+}
+
+.load-more-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Lists */
+.post-content ul,
+.post-content ol {
+  padding-left: 1.2rem;
+  line-height: 1.8;
+}
+
+.post-content ul {
+  list-style: none;
+}
+
+.post-content ul li {
+  position: relative;
+  padding-left: 1.4em;
+}
+
+.post-content ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--link-color);
+  font-size: 0.85em;
+  top: 0.15em;
+}
+
+.post-content ol {
+  list-style: none;
+  counter-reset: ol-counter;
+}
+
+.post-content ol li {
+  counter-increment: ol-counter;
+  position: relative;
+  padding-left: 2em;
+}
+
+.post-content ol li::before {
+  content: counter(ol-counter) ".";
+  position: absolute;
+  left: 0;
+  color: var(--link-color);
+  font-weight: 700;
+  min-width: 1.5em;
+}
+
+.post-content li + li {
+  margin-top: 0.25em;
 }

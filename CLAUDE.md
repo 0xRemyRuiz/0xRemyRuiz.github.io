@@ -37,13 +37,15 @@ git add themes/PaperMod
 git commit -m "update PaperMod"
 ```
 
-## Dark mode — CSS-only, no localStorage
+## Theming — light and dark via CSS variables
 
-Dark mode is enforced purely through `assets/css/extended/custom.css`, which overrides PaperMod's color variables at both `:root` and `.dark`. The palette is therefore constant regardless of which class the body carries.
+Two distinct palettes are defined in `assets/css/extended/custom.css`:
+- `:root` — light theme (off-white background, dark green text/accents)
+- `:root[data-theme="dark"]` — dark theme (hacker-green on near-black)
 
-`disableThemeToggle = true` in `hugo.toml` prevents the toggle button from rendering. PaperMod's theme-init script still runs on each page, but since the toggle is disabled the `pref-theme` localStorage key is never written — its read returns `null` and is a no-op.
+PaperMod's theme-init script toggles the `dark` class on `<body>`. `disableThemeToggle = false` in `hugo.toml` renders the toggle button. `defaultTheme = "dark"` means first-visit defaults to dark and writes `pref-theme` to localStorage so the preference persists.
 
-Do not remove the dual `:root, .dark { ... }` block from `custom.css` without replacing the theming strategy.
+Link and heading colors are driven by `--link-color`, `--link-hover-color`, and `--heading-color` CSS custom properties defined per theme in `custom.css`. Do not hardcode these colors directly on selectors.
 
 ## Search
 
@@ -59,12 +61,19 @@ Search uses PaperMod's built-in Fuse.js integration (JS bundled with PaperMod �
 - Hugo version is pinned via `HUGO_VERSION` at the top of the workflow file — update it there to upgrade.
 - The repository **Pages source** must be set to **GitHub Actions** in repo Settings → Pages.
 
+## Workflow rules
+
+- **Never execute PowerShell commands without explicit user approval first.** Propose the command and wait for confirmation before running it.
+- **Never execute Bash commands without explicit user approval first.** Propose the command and wait for confirmation before running it.
+- **Never execute git commands.** Git operations are performed manually by the user only.
+- **Never ask for confirmation before making CSS modifications.** Just make the change and inform the user it's done.
+
 ## JavaScript shipped
 
 | Feature | Status |
 |---|---|
 | Search (Fuse.js) | Enabled |
-| Theme toggle | Disabled (`disableThemeToggle = true`) |
+| Theme toggle | Enabled (`disableThemeToggle = false`, `defaultTheme = "dark"`) |
 | Code copy button | Disabled (`ShowCodeCopyButtons = false`) |
 | Scroll-to-top | Disabled (`ShowScrollToTop = false`) |
 | Share buttons | Disabled (`ShowShareButtons = false`) |

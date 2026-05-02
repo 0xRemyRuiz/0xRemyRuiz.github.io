@@ -2,11 +2,13 @@ baseURL = "https://0xremyruiz.github.io/"
 locale = "en"
 title = "0xRemyRuiz"
 theme = "PaperMod"
-paginate = 10
 enableRobotsTXT = true
 buildDrafts = true
 buildFuture = false
 buildExpired = false
+
+[pagination]
+  pagerSize = 5
 
 [minify]
   disableXML = true
@@ -39,6 +41,10 @@ buildExpired = false
 [[params.socialIcons]]
   name = "github"
   url = "https://github.com/0xRemyRuiz"
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/remy-ruiz/"
 
 [taxonomies]
   category = "categories"
