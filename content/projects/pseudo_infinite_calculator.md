@@ -3,10 +3,12 @@ title: "Pseudo-Infinite Calculator"
 date: 2026-05-02T10:03:17+02:00
 draft: false
 tags: ["Dev", "Maths", "Python"]
-description: "A relatively simple project to improve my Python skills — part 1"
+description: "A relatively simple project to improve my Python skills"
 ---
 
 ## Creating a pseudo-infinite naive calculator
+
+A post about getting a little better in Python using a toy project.
 
 This post is written long after the fact. I started it in early june 2024, at that time I was thinking about abandoning my cybersecurity career change as, at the time, opportunities were scarce. So I thought I might as well improve in python so that I could be able to come back to dev jobs or stay focused on cybersecurity as the language is immensely popular in the field as well. Python is also very important in AI. The idea for this project is simply a "reboot" of an Epitech exercise which I did back then and I knew it was an "easy" but interesting one.
 
