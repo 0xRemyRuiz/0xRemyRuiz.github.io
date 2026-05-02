@@ -105,6 +105,30 @@ p {
   cursor: default;
 }
 
+/* Card tags */
+.entry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+
+.entry-tag {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--link-color);
+  border: 1px solid var(--link-color);
+  padding: 0.15em 0.55em;
+  text-decoration: none;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.entry-tag:hover {
+  background-color: var(--link-color);
+  color: var(--theme);
+}
+
 /* Lists */
 .post-content ul,
 .post-content ol {
