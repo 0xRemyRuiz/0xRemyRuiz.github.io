@@ -1,10 +1,10 @@
 baseURL = "https://0xremyruiz.github.io/"
-languageCode = "en"
+locale = "en"
 title = "0xRemyRuiz"
 theme = "PaperMod"
 paginate = 10
 enableRobotsTXT = true
-buildDrafts = false
+buildDrafts = true
 buildFuture = false
 buildExpired = false
 
@@ -17,7 +17,7 @@ buildExpired = false
   author = "0xRemyRuiz"
   description = "Personal core dump, used to illustrate my learning process and personal projects, and maybe more."
   defaultTheme = "dark"
-  disableThemeToggle = true
+  disableThemeToggle = false
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
