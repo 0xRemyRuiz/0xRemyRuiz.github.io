@@ -1,5 +1,5 @@
 /*
- * Light theme (:root) — clean off-white with green accents.
+ * Light theme (:root) — clean off-white with brown accents.
  * Dark theme (.dark) — hacker-green on near-black.
  *
  * PaperMod's theme-init script toggles the "dark" class on <body>.
@@ -11,16 +11,16 @@
   --theme:    #f2f6f2;
   --entry:    #e6ede6;
   --primary:  #1a2e1a;
-  --secondary:#2d5a2d;
+  --secondary:#5c3515;
   --tertiary: #d0dfd0;
   --content:  #2a3a2a;
   --hljs-bg:  #e6ede6;
   --code-bg:  #e6ede6;
-  --border:   #9ab89a;
+  --border:   #a07848;
 
-  --link-color:       #146614;
-  --link-hover-color: #0a4a0a;
-  --heading-color:    #135213;
+  --link-color:       #7a3e18;
+  --link-hover-color: #4a2510;
+  --heading-color:    #623015;
 }
 
 :root[data-theme="dark"] {
@@ -75,6 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   text-align: justify;
+  color: var(--content);
 }
 
 .load-more-container {
@@ -127,6 +128,10 @@ p {
 .entry-tag:hover {
   background-color: var(--link-color);
   color: var(--theme);
+}
+
+.entry-footer {
+  color: var(--content);
 }
 
 /* Lists */

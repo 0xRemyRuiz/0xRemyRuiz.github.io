@@ -3,7 +3,7 @@ title: "Pseudo-Infinite Calculator"
 date: 2026-05-02T10:03:17+02:00
 draft: false
 tags: ["Dev", "Maths", "Python"]
-description: "A relatively simple project to improve my Python skills"
+description: "A relatively simple project to improve my Python skills."
 summary: "This post is about a previous toy project I used to get better in Python."
 ---
 
