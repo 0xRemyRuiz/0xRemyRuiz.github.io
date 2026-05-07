@@ -59,23 +59,34 @@ I started implementing the NEAT algorithm like I thought I should. After that, I
 
 I read in the original paper that debugging the implementation using the XOR mini game was a good initiative, and it can also serve as a benchmark. So I implemented a special client to "play" this XOR game and visualize the evolution of the neural network throughout generations. It helped debug my algorithm tremendously but, unfortunately, it also showed I was nowhere near a working solution. I tried to look at [CodeReclaimers' own configuration](https://github.com/CodeReclaimers/neat-python/tree/5fd31422e16ba09a2ff33327ecf5ccd75997208f/examples/xor) but did not really nail the specific part I was missing. I had no real idea where to look for a resolution.
 
+__*Video 3*__
+
 So I started using ChatGPT (4o just came out and was "close to AGI" lol) as a tutor to help me deep dive into the algorithm. One particular notion I knew I had to investigate wasn't even in the original research paper. _How do neural networks...work?_ I mean, I learned that a neuron is a math function and that you pass each "sensory" value (i.e., direction, orientation, nearest enemies, etc.) as an input to one or multiple neurons but how do they "chew" on them. I started learning about aggregation and "feed forward" mechanisms. At that point I started using ChatGPT to speed up my learning process and it worked well. It generated Python script examples from time to time and I was okay with it since it forced me to "translate" the code to my JavaScript context and since I was relatively well versed in both I could do it manually and quickly. I even started to ask trickier questions like «`Can I ask you what the ẟt value is? It is supposed to be the threshold below which is associated to a specific specie. How this value is set? To which number?`» coming directly from the paper by Kenneth O. Stanley and Risto Miikkulainen. I also worked to understand various fascinating notions such as bias, speciation, crossover, fitness sharing, mating strategy, etc.
 
 ## And then I had to stop
 
 I indeed had to stop. I spent nearly 4 months on this toy project. And even though I didn't work on it full-time, I spent many hours trying to understand scientific papers and Python implementations partly by myself. Moreover, after debugging and researching, I was starting to understand what I was doing wrong. I also knew the solution was a long shot. I do like to finish my projects and I really tried to — I put in time and effort and wrote many lines of code. I never planned on getting an education to have a career in AI. My primary goals were indeed complete.
 
- [V] better understand genetic algorithms
- [V] better understand neural networks
- [V] do something and get even better in dev
+ - [X] better understand genetic algorithms
+ - [X] better understand neural networks
+ - [X] do something and get even better in dev
 
 __Sometimes, stopping is the healthy option.__
 
 ## Wait...it's part 1 right?
 
-Yeah. Although I stopped my project, I know, in the future, I will complete it and be proud. Until then, have a good one!
+Yeah. Although I stopped my project I know, in the future, I will complete it and be proud. In the mean time, if you want to try it, you can follow isntructions from the README. You can play asteroids directly in your browser. To watch the xor neural network follow these steps :
 
-## Notes
+ 1. Load `genetics/master_controller.html` in your browser
+ 2. Load `xor_test_game.html` in your browser (in another tab, window or browser)
+ 3. Open a shell, go to the `genetics/` folder and then run `npm run start`
+ 4. In `master_controller.html` enter commands : `change xor` -> `init` -> `run`
+
+You can adjust the speed in `xor_test_game.html` window.
+
+That's it for now. Take care of yourself. I hope you have a good one!
+
+### Notes
  - Human written article
  - Article originally written in english
  - Minor AI correction suggestion applied
